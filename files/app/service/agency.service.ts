@@ -12,11 +12,11 @@ import { SAMPLEDATA2 } from './sampledata2';
 
 @Injectable()
 export class AgencyService {
-	private agencyAnnouncedSource = new Subject<string>();
+	public agencyAnnouncedSource = new Subject<string>();
 	agencyAnnounced$ = this.agencyAnnouncedSource.asObservable();
   
-	private agencyPortfolioStore = new AgencyPortfolioStore().extjsObject;
-	private agencyStore = new AgencyStore().extjsObject;
+	public agencyPortfolioStore = new AgencyPortfolioStore().extjsObject;
+	public agencyStore = new AgencyStore().extjsObject;
 
 	getAgencyPortfolioStore() {
 		return this.agencyPortfolioStore;

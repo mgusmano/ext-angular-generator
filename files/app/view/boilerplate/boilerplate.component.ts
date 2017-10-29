@@ -22,7 +22,7 @@ import data from './data';
 			</grid>
 		</panel>
 		<panel
-				[title]="employee"
+				[title]="'employee'"
 				[layout]="'vbox'"
 				[margin]="'0 0 10px 0'"
 				[plugins]="'responsive'"
@@ -44,10 +44,10 @@ import data from './data';
 	`
 })
 export class BoilerplateComponent { 
-	employeeDetails: any;
-	ptoStore: any;
-	grid: any;
-	employeePanel: any;
+	public employeeDetails: any;
+	public ptoStore: any;
+	public grid: any;
+	public employeePanel: any;
 
 	constructor() {
 		this.ptoStore = Ext.create('Ext.data.Store', {
@@ -77,10 +77,10 @@ export class BoilerplateComponent {
 	};
 
 	onPersonSelect(event) {
-		var employee = event.record.data;
-		console.log({ employee: event.record.data });
-		this.employeePanel.x.setTitle(event.record.data.name);
-		this.loadEmployeePTOData(event.record.data);
+		var employee = event.records[0].data;
+		//console.log(employee);
+		this.employeePanel.x.setTitle(employee.name);
+		this.loadEmployeePTOData(employee);
 		var html = `
 		<div style="padding:0 0 30px 0;color:#000000;">
 				<div style="float:left;font-size:14px;">${employee.email}</div>
@@ -91,7 +91,6 @@ export class BoilerplateComponent {
 		</div>
 		`
 		this.employeeDetails.x.setHtml(html);
-
 	}
 
 	loadEmployeePTOData (employee) {

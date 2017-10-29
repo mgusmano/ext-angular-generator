@@ -30,24 +30,24 @@ import { SalesStore } from '../../store/sales.store';
  `
 })
 export class AnalyzeComponent {
-	private header: any = '<div class="heading">Analyze</div>';
-	private selectfieldConfig: any = {
+	public header: any = '<div class="heading">Analyze</div>';
+	public selectfieldConfig: any = {
 		label: 'Select report:',
 		labelWidth: 100,
 		usePicker: true,
 		margin: '15 0 0 10'
 	}
-	private selectfieldOptions: any = [
+	public selectfieldOptions: any = [
 		{ value: 'ByCountry', text: 'What are the order amounts of each salesperson in a specific country?' },
 		{ value: 'ByYear', text: 'How did salespeople perform in a specific year?' },
 		{ value: 'Total', text: 'What are the order amounts of each salesperson?' }
 	]
 	
-	private thePivotGrid; any;
-	private pivotTitle: any;
-	private pivotgridConfig: any;
+	public thePivotGrid; any;
+	public pivotTitle: any;
+	public pivotgridConfig: any;
 	public theCartesian: any;
-	private cartesianConfig: any;
+	public cartesianConfig: any;
 
 	constructor() {
 		this.cartesianInit();
@@ -111,7 +111,7 @@ export class AnalyzeComponent {
 		this.theCartesian = theCartesian;
 	}
 
-	private onPivotgridPivotDone({matrix}) {
+	public onPivotgridPivotDone({matrix}) {
 //		console.log('onPivotgridPivotDone');
 		var chart = this.theCartesian.x;
 		var seriesXField = []; 
@@ -153,7 +153,7 @@ export class AnalyzeComponent {
 	}
 
 
-	private onSelectfieldSelect({newValue}) {
+	public onSelectfieldSelect({newValue}) {
 		var reportspivotgrid = this.thePivotGrid.extjsObject;
 		switch(newValue) {
 			case 'ByCountry':

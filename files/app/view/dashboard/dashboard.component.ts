@@ -19,7 +19,7 @@ export class DashboardComponent {
 		// 		<actionsheet [items]="actionsheetItems" (ready)="onActionSheetReady($event)"></actionsheet>
 		// 	</div>
 		// </div>
-	// private actionsheet: any;
+	// public actionsheet: any;
 	// actionsheetItems = [
 	// 	{ text: 'Delete draft',ui: 'decline' },
 	// 	{ text: 'Save draft' },
@@ -37,11 +37,11 @@ export class DashboardComponent {
 	// // 	//component.actionsheet.extjsObject.hide();
 	// // }
 
-	private theCalendar: any;
+	public theCalendar: any;
 	readyCalendar(theCalendar) {
 		this.theCalendar = theCalendar;
 	}
-	private calendarConfig:any =  {
+	public calendarConfig:any =  {
 		left: 0, top: 40,
 		style: { width: '100%', height: 'calc(100% - 40px)' },
 
@@ -72,14 +72,14 @@ export class DashboardComponent {
 
 
 
-	private d3Config:any = {};
-	private carouselConfig:any = {};
-	private pivotgridConfig:any = {};
-	private polarConfig:any = {};
-	private cartesianConfig:any = {};
-	private listConfig:any = {};
-	private timerId: any;
-	private theCarousel: any;
+	public d3Config:any = {};
+	public carouselConfig:any = {};
+	public pivotgridConfig:any = {};
+	public polarConfig:any = {};
+	public cartesianConfig:any = {};
+	public listConfig:any = {};
+	public timerId: any;
+	public theCarousel: any;
 
 	readyCarousel(theCarousel) {
 		this.theCarousel = theCarousel;
@@ -100,7 +100,7 @@ export class DashboardComponent {
 		clearInterval(this.timerId );
 	}
 
-	constructor(private agencyService: AgencyService) {
+	constructor(public agencyService: AgencyService) {
 
 		this.d3Config = {
 			left: 0, top: 40,

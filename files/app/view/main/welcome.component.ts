@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 })
 
 export class WelcomeComponent {
-	private firstName: any = 'Donald'; private lastName:any = 'Trump';
-	private userImage: any;
+	public firstName: any = 'Donald'; public lastName:any = 'Trump';
+	public userImage: any;
 
 	constructor(){
 		this.userImage = 'assets/resources/app/users/' + this.firstName + this.lastName +'.jpeg'

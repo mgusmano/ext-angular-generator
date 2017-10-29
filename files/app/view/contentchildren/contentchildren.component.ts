@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 export class ContentChildrenComponent { 
 	button1Config = { text:'1', ui: 'action' };
 	button2Config = { text:'2', ui: 'action' };
-	private containerConfig:any = {};
+	public containerConfig:any = {};
 	constructor() {
 		this.containerConfig = {
 			html: 'hi',

@@ -7,7 +7,7 @@ import { StocksStore } from '../../store/stocks.store';
 	template: `<d3-treemap [config]='d3Config' ></d3-treemap>`
 })
 export class D3TreeListComponent { 
-	private d3Config: any = {};
+	public d3Config: any = {};
 
 	constructor () {
 		this.d3Config = {

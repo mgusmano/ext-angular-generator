@@ -29,7 +29,7 @@ export class SimpleGridComponent {
 		]
 	};
 
-	private onGridSelect({record}) {
+	public onGridSelect({record}) {
 		alert(record.data.name);
 	}
 }
@@ -51,26 +51,26 @@ export class SimpleGridComponent {
 
 
 
-	// private onGridActivate(event) { console.log(event); }
-	// private onGridHide(event) { console.log(event); }
+	// public onGridActivate(event) { console.log(event); }
+	// public onGridHide(event) { console.log(event); }
 
 
 
 
-	// private gridReady(grid) {
+	// public gridReady(grid) {
 	// //	this.gridExtObject = grid.extjsObject;
 	// }
 
-// 	private onTap() { 
+// 	public onTap() { 
 // 		console.log('tap'); 
 // //		this.gridExtObject.setStore()
 // 	}
-	//private onEmailChange({newValue}) { console.log(newValue); }
+	//public onEmailChange({newValue}) { console.log(newValue); }
 
 	// gridListeners = {
 	// 	select: this.doSelect()
 	// }
-	// private doSelect() { alert('doselect'); }
+	// public doSelect() { alert('doselect'); }
 
 
 

@@ -11,7 +11,7 @@ import {Component} from '@angular/core';
 })
 export class TreeListComponent {
 
-	private onTreeReady(theTree) {
+	public onTreeReady(theTree) {
 		var treeliststore = {
 			data: {
 				root: {

@@ -5,6 +5,10 @@
 * Node.js - https://nodejs.org/  (choose current)
 * Angular CLI - npm install -g @angular/cli@latest
 
+## Running Example:
+
+http://se.sencha.com/ExtAngularExample
+
 ## Instructions on how to get the sample running (run in terminal window)
 
 * mkdir ext-angular

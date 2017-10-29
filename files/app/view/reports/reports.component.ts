@@ -14,20 +14,20 @@ import { AgencyService }  from '../../service/agency.service';
 		<pivotgrid
 			fitToParent=true
 			[config]='pivotgridConfig'
-			[title] ='pivotTitle'
+			[title] ="'pivotTitle'"
 			(ready)="readyPivotGrid($event)"
 		></pivotgrid>
 	`
 })
 export class ReportsComponent { 
-	private margin:any = 10;
-	private headerHeight:any = 35;
-	private width: any = 'calc(100% - ' + this.margin + 'px - ' + this.margin + 'px)';
-	private height: any = 'calc(100% - ' + this.headerHeight + 'px - ' + this.margin + 'px - ' + this.margin + 'px)';
-	private thePivotGrid; any;
-	private pivotgridConfig: any;
+	public margin:any = 10;
+	public headerHeight:any = 35;
+	public width: any = 'calc(100% - ' + this.margin + 'px - ' + this.margin + 'px)';
+	public height: any = 'calc(100% - ' + this.headerHeight + 'px - ' + this.margin + 'px - ' + this.margin + 'px)';
+	public thePivotGrid; any;
+	public pivotgridConfig: any;
 
-	constructor(private agencyService: AgencyService) {
+	constructor(public agencyService: AgencyService) {
 		this.pivotgridInit();
 	}
 
@@ -54,7 +54,7 @@ export class ReportsComponent {
 		this.thePivotGrid = thePivotGrid;
 	}
 
-	private objArray:any = [
+	public objArray:any = [
 		{ value: 'r0', text: 'Select a Report...' }, 
 		{ value: 'r1', text: 'Total IT Spending By Agency' }, 
 		{ value: 'r2', text: 'Total IT Spending By Type of Investment' },

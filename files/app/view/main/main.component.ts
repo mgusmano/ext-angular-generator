@@ -44,9 +44,9 @@ import { Router, NavigationEnd } from '@angular/router';
 
 })
 export class MainComponent {
-	private detail:any = '';
+	public detail:any = '';
 
-	constructor(private router: Router) {
+	constructor(public router: Router) {
 		router.events.subscribe(value => {
 			if (value instanceof NavigationEnd) {
 				if (this.router.routerState.snapshot.url == '/agenciesNN') {

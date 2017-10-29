@@ -87,13 +87,13 @@ export class ExtAngularComponent {
 	}
 
 	//**********************************************
-	private titlePivotGrid: string;
-	private leftAxisPivotGrid: any;
-	private topAxisPivotGrid: any;
-	private aggregatePivotGrid: any;
-	private storePivotGrid: any;
-	private configPivotGrid: any;
-	private pivotGridConstruct() {
+	public titlePivotGrid: string;
+	public leftAxisPivotGrid: any;
+	public topAxisPivotGrid: any;
+	public aggregatePivotGrid: any;
+	public storePivotGrid: any;
+	public configPivotGrid: any;
+	public pivotGridConstruct() {
 		this.titlePivotGrid = 'Pivot Grid';
 		this.topAxisPivotGrid = [{	dataIndex: 'country', direction: 'ASC' }];
 		this.leftAxisPivotGrid = [
@@ -122,18 +122,18 @@ export class ExtAngularComponent {
 			rowGrandTotalsPosition: 'none'
 		};
 	}
-	private onPivotDone(event) {
+	public onPivotDone(event) {
 		console.log('pivotdone', event);
 	}
 	//**********************************************
 
 	//**********************************************
-	private titleSimpsons: string;
-	private columnsSimpsons: any;
-	private selModelSimpsons: any;
-	private storeSimpsons: any;
-	private configSimpsons: any;
-	private gridSimpsonsConstruct() {
+	public titleSimpsons: string;
+	public columnsSimpsons: any;
+	public selModelSimpsons: any;
+	public storeSimpsons: any;
+	public configSimpsons: any;
+	public gridSimpsonsConstruct() {
 		this.titleSimpsons = 'Simpsons';
 		this.columnsSimpsons = [
 			{ text: 'Name', width: 100, sortable: false, hideable: false, dataIndex: 'name' },
@@ -146,27 +146,27 @@ export class ExtAngularComponent {
 		this.storeSimpsons = new SimpsonsStore({}).extjsObject;
 		this.configSimpsons = { width: '100%', height: '300px' };
 	}
-	private onGridSelectSimpsons(event) {
+	public onGridSelectSimpsons(event) {
 		console.log('select', event);
 		this.email = event.record.data.email;
 	}
-	private onGridSelectionChangeSimpsons(event) {
+	public onGridSelectionChangeSimpsons(event) {
 		console.log('selectionchange', event);
 	}
-	private onGridBeforeCellClickSimpsons(event) {
+	public onGridBeforeCellClickSimpsons(event) {
 		console.log('beforecellclick', event);
 	}
-	private onGridEnableSimpsons(event) {
+	public onGridEnableSimpsons(event) {
 		console.log('enable', event);
 	}
-	private onGridGenericSimpsons(event) {
+	public onGridGenericSimpsons(event) {
 		console.log('generic', event);
 	}
 	//**********************************************
 
 	//**********************************************
-	private buttonConfigHello: any = { width: 200 };
-	private onButtonClickHello(event) {
+	public buttonConfigHello: any = { width: 200 };
+	public onButtonClickHello(event) {
 		this.titleSimpsons = 'ya';
 		let user = new SimpsonsModel({
 			name : 'Conan',
@@ -184,12 +184,12 @@ export class ExtAngularComponent {
 	//**********************************************
 
 	//**********************************************
-	private titleForum: string;
-	private columnsForum: any;
-	private selModelForum: any;
-	private storeForum: any;
-	private configForum: any;
-	private gridForumConstruct() {
+	public titleForum: string;
+	public columnsForum: any;
+	public selModelForum: any;
+	public storeForum: any;
+	public configForum: any;
+	public gridForumConstruct() {
 		this.titleForum = 'Forum Threads - Buffered Store and Renderer';
 		this.columnsForum = [
 			// {
@@ -252,22 +252,22 @@ export class ExtAngularComponent {
 			}
 		};
 	}
-	private onGridSelectForum(event) {
+	public onGridSelectForum(event) {
 		console.log(event);
 		this.email = event.record.data.email;
 	}
-	private onGridSelectionChangeForum(event) {
+	public onGridSelectionChangeForum(event) {
 		console.log(event);
 	}
 	//**********************************************
 	
 	//**********************************************
-	private titleSales: string;
-	private columnsSales: any;
-	private selModelSales: any;
-	private storeSales: any;
-	private configSales: any;
-	private gridSalesConstruct() {
+	public titleSales: string;
+	public columnsSales: any;
+	public selModelSales: any;
+	public storeSales: any;
+	public configSales: any;
+	public gridSalesConstruct() {
 		this.titleSales = 'Sales';
 		this.columnsSales = [
 			{
@@ -323,11 +323,11 @@ export class ExtAngularComponent {
 			}
 		};
 	}
-	private onGridSelectSales(event) {
+	public onGridSelectSales(event) {
 		console.log(event);
 		this.email = event.record.data.email;
 	}
-	private onGridSelectionChangeSales(event) {
+	public onGridSelectionChangeSales(event) {
 		console.log(event);
 	}
 	//**********************************************

@@ -19,15 +19,15 @@ import { Router } from '@angular/router';
 })
 
 export class SideBarComponent {
-	private expanded: any = [];
-	private chevron: any = [];
-	private expandedx: any = [];
-	private chevronx: any = [];
+	public expanded: any = [];
+	public chevron: any = [];
+	public expandedx: any = [];
+	public chevronx: any = [];
 
-	//private firstName: any = 'Donald'; private lastName:any = 'Trump';
-	private firstName: any = 'Hillary'; private lastName:any = 'Clinton';
-	//private firstName: any = 'Barack'; private lastName:any = 'Obama';
-	private userImage: any;
+	//public firstName: any = 'Donald'; public lastName:any = 'Trump';
+	public firstName: any = 'Hillary'; public lastName:any = 'Clinton';
+	//public firstName: any = 'Barack'; public lastName:any = 'Obama';
+	public userImage: any;
 
 	toggle(item){
 		this.expanded[item] = !this.expanded[item];
@@ -56,7 +56,7 @@ export class SideBarComponent {
   //   //return this.router.isRouteActive(this.router.generate(instruction));
   // }
 
-	constructor(private router: Router){
+	constructor(public router: Router){
 		this.userImage = 'resources/app/users/' + this.firstName + this.lastName +'.jpeg'
 
 		this.expanded = [false,false,false,false,false,false];

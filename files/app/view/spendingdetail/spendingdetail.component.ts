@@ -16,8 +16,8 @@ import { AgencyService }  from '../../service/agency.service';
 	`
 })
 export class SpendingDetailComponent { 
-	private gridConfig: any;
-	private theGrid: any;
+	public gridConfig: any;
+	public theGrid: any;
 
 	selectGrid(o) {
 		console.log(o.record);
@@ -35,7 +35,7 @@ export class SpendingDetailComponent {
 		this.theGrid = theGrid.extjsObject;
 	}
 
-	constructor(private agencyService: AgencyService) {
+	constructor(public agencyService: AgencyService) {
 		this.gridConfig = { 
 			store: agencyService.getAgencyPortfolioStore(),
 			plugins: [
@@ -86,7 +86,7 @@ export class SpendingDetailComponent {
 		};
 	}
 
-	private exportTo() {
+	public exportTo() {
 		alert('exportTo');
 	}
 

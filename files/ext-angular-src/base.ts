@@ -57,7 +57,16 @@ export class base{
 				var eventIndex = metadata.OUTPUTNAMES.indexOf(eventname);
 				if (eventIndex != -1) {
 					var eventparameters = metadata.OUTPUTS[eventIndex].parameters
-					o.listeners[eventname] = function() {
+
+					var extjsevent = '';
+					if (eventname == 'tapit') {
+						extjsevent = 'tap'
+					}
+					else {
+						extjsevent = eventname
+					}
+					o.listeners[extjsevent] = function() {
+					//o.listeners[eventname] = function() {
 							let parameters: any = eventparameters;
 							let parms = parameters.split(',');
 							let args = Array.prototype.slice.call(arguments);

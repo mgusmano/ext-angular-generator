@@ -44,7 +44,7 @@ export class AgenciesComponent {
 			// (itemmouseleave)="itemmouseleaveDataView($event)"
 
 
-	constructor(private agencyService: AgencyService) {}
+	constructor(public agencyService: AgencyService) {}
 
 	dataviewConfig: any = { 
 		style: { width: '100%', height: '100%', background: '#f1f5f6' },

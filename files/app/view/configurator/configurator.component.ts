@@ -6,7 +6,7 @@ import { AgencyService }  from '../../service/agency.service';
 	template: `
 	<container [fitToParent]="'true'" [layout]="'vbox'">
 		<panel [margin]="'20 20 20 20'" [title]="header" [shadow]="'true'">
-		<button [text]="'Show Configurator'" (tapit)='showConfigurator($event)' style="margin-top:10px;margin-left:10px;width:250px;height:50px;" >
+		<button [text]="'Show Configurator'" (tapit)='showConfigurator()' style="margin-top:10px;margin-left:10px;width:250px;height:50px;" >
 			Show Configurator
 		</button>
 		</panel>
@@ -19,12 +19,12 @@ import { AgencyService }  from '../../service/agency.service';
 	`
 })
 export class ConfiguratorComponent {
-	private header: any = '<div class="heading">Analyze</div>';
-	private top:any = 50;
-	private width: any = 'calc(100% - 0px)';
-	private height: any = 'calc(100% - ' + this.top + 'px)';
-	private configuratorConfig:any;
-	private thePivotGrid; any;
+	public header: any = '<div class="heading">Analyze</div>';
+	public top:any = 50;
+	public width: any = 'calc(100% - 0px)';
+	public height: any = 'calc(100% - ' + this.top + 'px)';
+	public configuratorConfig:any;
+	public thePivotGrid; any;
 
 	readyPivotGrid(thePivotGrid) {
 		this.thePivotGrid = thePivotGrid;
@@ -38,7 +38,7 @@ export class ConfiguratorComponent {
 		this.thePivotGrid.extjsObject.reconfigurePivot({'colGrandTotalsPosition': 'last' });
 	}
 
-	constructor(private agencyService: AgencyService) {
+	constructor(public agencyService: AgencyService) {
 		this.configuratorConfig = { 
 			//left: 0, top: this.top,
 			//style: { width: this.width, height: this.height },

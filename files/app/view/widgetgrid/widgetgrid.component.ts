@@ -22,9 +22,9 @@ export class WidgetGridComponent {
 		console.log(theGrid);
 	}
 
-	private border:any = 0;
-	private size: any = 'calc(100% - ' + (this.border * 2) + 'px)'
-	private gridConfig:any;
+	public border:any = 0;
+	public size: any = 'calc(100% - ' + (this.border * 2) + 'px)'
+	public gridConfig:any;
 	constructor() {
 		this.gridConfig = { 
 			left: this.border, top: this.border,

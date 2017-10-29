@@ -11,10 +11,10 @@ import { Component, OnInit } from '@angular/core';
 	`
 })
 export class ChartComponent implements OnInit { 
-	private border:any = 0;
-	private size: any = 'calc(100% - ' + (this.border * 2) + 'px)'
-	private polarConfig:any = {};
-	private cartesianConfig:any = {};
+	public border:any = 0;
+	public size: any = 'calc(100% - ' + (this.border * 2) + 'px)'
+	public polarConfig:any = {};
+	public cartesianConfig:any = {};
 
   ngOnInit() {
 

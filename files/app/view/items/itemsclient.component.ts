@@ -3,7 +3,7 @@ import { Component, Type } from '@angular/core';
 import { SimpleComponent } from '../items/simple.component';
 import { FooterComponent } from '../main/footer.component';
 import { TabsClientComponent } from '../tabs/tabsclient.component';
-import { OutletComponent } from '../main/outlet.component';
+//import { OutletComponent } from '../main/outlet.component';
 import { SideBarComponent } from '../main/sidebar.component';
 import { WelcomeComponent } from '../main/welcome.component';
 import { MenuComponent } from '../main/menu.component';
@@ -36,24 +36,24 @@ import { ActionsComponent } from '../main/actions.component';
 export class ItemsClientComponent {
 	tabs: Type<TabsClientComponent> = TabsClientComponent;
 	sidebar: Type<SideBarComponent> = SideBarComponent;
-	private panelConfig: any = { style: { background: 'lightyellow'}, top: 10, left:10, width: 1000, height: 900 }
-	private leftConfig: any = { xhtml: 'left', width: 200, style: { background: 'lightgray'}}
-	private topConfig: any = { style: { background: 'lightgreen'}, height: 50, padding: 0	}
-		private button1Config: any = { text: 'hello1', ui: 'action', margin: 2 }
-		private button2Config: any = { text: 'hello2', ui: 'action', margin: 2 }
-		private button3Config: any = { text: 'hello3', ui: 'action', margin: 2 }
-	private bottomConfig: any = { xhtml: 'bottom', width: 500, height:40,  style: { background: 'lightgreen'}}
-	private centerConfig: any = { html: 'center', flex: 1, style: { background: 'lightyellow'}}
-	//private centerConfig: any = { component: 'outlet', item: 'a03', html: '<div id="a03"></div>'}
-	private rightConfig: any = { xid: 'theRight', html: 'right', width: 200, style: { background: 'lightblue'}}
+	public panelConfig: any = { style: { background: 'lightyellow'}, top: 10, left:10, width: 1000, height: 900 }
+	public leftConfig: any = { xhtml: 'left', width: 200, style: { background: 'lightgray'}}
+	public topConfig: any = { style: { background: 'lightgreen'}, height: 50, padding: 0	}
+		public button1Config: any = { text: 'hello1', ui: 'action', margin: 2 }
+		public button2Config: any = { text: 'hello2', ui: 'action', margin: 2 }
+		public button3Config: any = { text: 'hello3', ui: 'action', margin: 2 }
+	public bottomConfig: any = { xhtml: 'bottom', width: 500, height:40,  style: { background: 'lightgreen'}}
+	public centerConfig: any = { html: 'center', flex: 1, style: { background: 'lightyellow'}}
+	//public centerConfig: any = { component: 'outlet', item: 'a03', html: '<div id="a03"></div>'}
+	public rightConfig: any = { xid: 'theRight', html: 'right', width: 200, style: { background: 'lightblue'}}
 
-	//private welcomeConfig: any = { html: 'welcome', height: 50, style: { backgroundColor: 'lightblue'}}
+	//public welcomeConfig: any = { html: 'welcome', height: 50, style: { backgroundColor: 'lightblue'}}
 
 	// onSelectionChange(event) {
 	// 	alert(event.node.data.xtype);
 	// }
 
-	// private menuConfig: any = {
+	// public menuConfig: any = {
 	// 	xtype: 'treelist',
 	// 	flex: 1,
 	// 	expanderFirst: false,

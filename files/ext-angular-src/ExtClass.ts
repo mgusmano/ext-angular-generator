@@ -1,6 +1,6 @@
 declare var Ext: any;
 
-export class ExtClass {
+	export class ExtClass {
 	public className: any;
 	public extend: any;
 	public defineConfig: any;

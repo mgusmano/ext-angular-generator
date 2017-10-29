@@ -14,8 +14,8 @@ import { Component } from '@angular/core';
 
 })
 export class HeaderComponent { 
-	//private thePivotGrid: any;
-	private objArray:any = [
+	//public thePivotGrid: any;
+	public objArray:any = [
 		{name: 'All Agencies'}, 
 		{name: 'Department of Agriculture'}, 
 		{name: 'Department of Commerce'}, 
@@ -24,7 +24,7 @@ export class HeaderComponent {
 		{name: 'Department of Homeland Security'},
 	];
 
-//	constructor(private agencyService: AgencyService) {}
+//	constructor(public agencyService: AgencyService) {}
 
 	// readyPivotGrid(thePivotGrid) {
 	// 	this.thePivotGrid = thePivotGrid;
