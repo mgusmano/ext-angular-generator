@@ -27,25 +27,25 @@ http://se.sencha.com/ExtAngularExample
 
 ```javascript
 "styles": [
-	"assets/ext-6.5.2/build/modern/theme-material/resources/theme-material-all.css",
-	"assets/ext-6.5.2/packages/pivot/build/modern/material/resources/pivot-all.css",
-	"assets/ext-6.5.2/packages/calendar/build/modern/material/resources/calendar-all.css",
-	"assets/ext-6.5.2/build/packages/charts/modern/modern-material/resources/charts-all.css",
-	"assets/ext-6.5.2/packages/d3/build/modern/material/resources/d3-all.css",
-	"assets/ext-6.5.2/packages/exporter/build/modern/resources/exporter-all.css",
-	"assets/ext-6.5.2/packages/pivot-d3/build/modern/material/resources/pivot-d3-all.css",
+	"ext-6.5.2/build/modern/theme-material/resources/theme-material-all.css",
+	"ext-6.5.2/packages/pivot/build/modern/material/resources/pivot-all.css",
+	"ext-6.5.2/packages/calendar/build/modern/material/resources/calendar-all.css",
+	"ext-6.5.2/build/packages/charts/modern/modern-material/resources/charts-all.css",
+	"ext-6.5.2/packages/d3/build/modern/material/resources/d3-all.css",
+	"ext-6.5.2/packages/exporter/build/modern/resources/exporter-all.css",
+	"ext-6.5.2/packages/pivot-d3/build/modern/material/resources/pivot-d3-all.css",
 	"../node_modules/bootstrap/dist/css/bootstrap.css",
 	"styles.css"
 ],
 "scripts": [
-	"assets/ext-6.5.2/build/ext-modern-all.js",
-	"assets/ext-6.5.2/packages/exporter/build/modern/exporter.js",
-	"assets/ext-6.5.2/packages/pivot/build/modern/pivot.js",
-	"assets/ext-6.5.2/packages/calendar/build/modern/calendar.js",
-	"assets/ext-6.5.2/build/packages/charts/modern/charts.js",
-	"assets/ext-6.5.2/packages/d3/build/modern/d3.js",
-	"assets/ext-6.5.2/packages/pivot-d3/build/modern/pivot-d3.js",
-	"assets/ext-6.5.2/packages/pivot-locale/${package.build.dir}/modern/pivot-locale-en.js"
+	"ext-6.5.2/build/ext-modern-all.js",
+	"ext-6.5.2/packages/exporter/build/modern/exporter.js",
+	"ext-6.5.2/packages/pivot/build/modern/pivot.js",
+	"ext-6.5.2/packages/calendar/build/modern/calendar.js",
+	"ext-6.5.2/build/packages/charts/modern/charts.js",
+	"ext-6.5.2/packages/d3/build/modern/d3.js",
+	"ext-6.5.2/packages/pivot-d3/build/modern/pivot-d3.js",
+	"ext-6.5.2/packages/pivot-locale/${package.build.dir}/modern/pivot-locale-en.js"
 ],
 ```
 * ng serve
