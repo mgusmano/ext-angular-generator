@@ -31,7 +31,7 @@
 	"assets/ext-6.5.2/packages/exporter/build/modern/resources/exporter-all.css",
 	"assets/ext-6.5.2/packages/pivot-d3/build/modern/material/resources/pivot-d3-all.css",
 	"../node_modules/bootstrap/dist/css/bootstrap.css",
-	"styles.css
+	"styles.css"
 ],
 "scripts": [
 	"assets/ext-6.5.2/build/ext-modern-all.js",
