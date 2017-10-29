@@ -48,4 +48,4 @@
 
 to remove the compiler warning:
 * edit ext-6.5.2/build/packages/charts/modern/modern-material/resources/charts-all.css
-	** replace  display:box  with  display:flex
+	- replace  display:box  with  display:flex
