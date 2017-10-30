@@ -4,6 +4,7 @@
 
 * Node.js - https://nodejs.org/  (choose current)
 * Angular CLI - npm install -g @angular/cli@latest
+* Licenced copy of Sencha Ext JS 6.5.2 Premium
 
 ## Running Example:
 
