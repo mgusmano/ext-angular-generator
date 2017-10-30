@@ -17,7 +17,7 @@ http://se.sencha.com/ExtAngularExample
 * git clone https://github.com/mgusmano/ext-angular-generator
 * npm install -g @angular/cli@latest
 * ng new ExtAngularExample --minimal
-* cp -R ext-angular-generator/files/ ExtAngularExample/src
+* cp -R ext-angular-generator/src/ ExtAngularExample/src
 * cd ExtAngularExample
 * npm install --save bootstrap@latest
 * copy the Ext JS 6.5.2 framework to a folder named src/ext-6.5.2
