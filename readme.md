@@ -20,7 +20,7 @@ http://se.sencha.com/ExtAngularExample
 * cp -R ext-angular-generator/files/ ExtAngularExample/src
 * cd ExtAngularExample
 * npm install --save bootstrap@latest
-* copy the Ext JS 6.5.2 framework to a folder named src/assets/ext-6.5.2
+* copy the Ext JS 6.5.2 framework to a folder named src/ext-6.5.2
 	- get the Ext JS 6.5.2 framework from https://support.sencha.com
 	- also get the Ext Premium Addons and copy them to the packages folder of the framework
 	- only need the build and packages folders
