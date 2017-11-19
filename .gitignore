@@ -5,3 +5,4 @@ modern-all-classes-flatten.json
 classic-all-classes-flatten.json
 node_modules
 ext-6.5.2
+.DS_Store
