@@ -27,6 +27,7 @@ For Modern:
 * cp -R ext-angular-generator/src/ext-angular-modern Modern/src
 * cp -R ext-angular-generator/demo/modern/src/* Modern/src
 
+For Modern or Classic:
 * cd to either Modern or Classic
 * npm install --save bootstrap@latest
 * copy the Ext JS 6.5.2 framework to a folder named src/ext-6.5.2
