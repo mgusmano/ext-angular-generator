@@ -17,15 +17,17 @@ http://se.sencha.com/ExtAngularExample
 * git clone https://github.com/mgusmano/ext-angular-generator
 * npm install -g @angular/cli@latest
 
+For Classic:
 * ng new Classic --minimal
-* cp -R ext-angular-generator/src/ext-angular-classic/* Classic/src
-* cp -R ext-angular-generator/demo/src/* Classic/src
-* cd Classic
+* cp -R ext-angular-generator/src/ext-angular-classic Classic/src
+* cp -R ext-angular-generator/demo/classic/src/* Classic/src
 
+For Modern:
+* ng new Modern --minimal
+* cp -R ext-angular-generator/src/ext-angular-modern Modern/src
+* cp -R ext-angular-generator/demo/modern/src/* Modern/src
 
-* ng new ExtAngularExample --minimal
-* cp -R ext-angular-generator/src/* ExtAngularExample/src
-* cd ExtAngularExample
+* cd to either Modern or Classic
 * npm install --save bootstrap@latest
 * copy the Ext JS 6.5.2 framework to a folder named src/ext-6.5.2
 	- get the Ext JS 6.5.2 framework from https://support.sencha.com
@@ -33,6 +35,8 @@ http://se.sencha.com/ExtAngularExample
 	- only need the build and packages folders
 * replace these sections in .angular-cli.json
 
+
+For Modern:
 ```javascript
 "styles": [
 	"ext-6.5.2/build/modern/theme-material/resources/theme-material-all.css",
