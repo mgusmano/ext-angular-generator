@@ -36,6 +36,19 @@ For Modern or Classic:
 	- only need the build and packages folders
 * replace these sections in .angular-cli.json
 
+		"assets": [
+			"ext-6.5.2",
+			"assets",
+			"favicon.ico"
+		],
+
+		"styles": [
+			"../node_modules/bootstrap/dist/css/bootstrap.css",
+			"styles.css"
+		],
+
+
+
 
 For Modern:
 ```javascript
@@ -64,5 +77,5 @@ For Modern:
 * ng serve
 
 to remove the compiler warning:
-* edit ext-6.5.2/build/packages/charts/modern/modern-material/resources/charts-all.css
+* edit src/ext-6.5.2/build/packages/charts/modern/modern-material/resources/charts-all.css
 	- replace  display:box  with  display:flex

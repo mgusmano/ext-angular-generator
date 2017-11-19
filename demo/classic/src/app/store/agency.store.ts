@@ -1,5 +1,5 @@
 declare var Ext: any;
-import {ExtClass} from '../../ext-angular-src/ExtClass';
+import {ExtClass} from '../../ext-angular-classic/ExtClass';
 
 export class AgencyStore extends ExtClass {
 	constructor (createConfig?: any) {

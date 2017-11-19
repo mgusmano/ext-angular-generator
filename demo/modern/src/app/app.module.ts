@@ -6,7 +6,7 @@ import { NgModule, enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ExtAngularModule } from '../ext-angular-src';
+import { ExtAngularModule } from '../ext-angular-modern';
 
 import { AgencyService } from './service/agency.service';
 
