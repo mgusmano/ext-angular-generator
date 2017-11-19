@@ -12,10 +12,17 @@ http://se.sencha.com/ExtAngularExample
 
 ## Instructions on how to get the sample running (run in terminal window)
 
-* mkdir ext-angular-example
-* cd ext-angular-example
+* mkdir ext-angular-examples
+* cd ext-angular-examples
 * git clone https://github.com/mgusmano/ext-angular-generator
 * npm install -g @angular/cli@latest
+
+* ng new Classic --minimal
+* cp -R ext-angular-generator/src/ext-angular-classic/* Classic/src
+* cp -R ext-angular-generator/demo/src/* Classic/src
+* cd Classic
+
+
 * ng new ExtAngularExample --minimal
 * cp -R ext-angular-generator/src/* ExtAngularExample/src
 * cd ExtAngularExample
