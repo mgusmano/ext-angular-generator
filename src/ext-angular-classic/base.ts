@@ -31,7 +31,13 @@ export class base{
 		var extJSRootComponentRef : base = ExtJSBaseRef.first;
 		//var firstExtJS = extJSRootComponentRef['_element'].component.extjsObject;
 		var firstExtJS = extJSRootComponentRef.extjsObject;
-		firstExtJS.setRenderTo(this.myElement.nativeElement);
+		//firstExtJS.setRenderTo(this.myElement.nativeElement);
+		if (Ext.isClassic == true) {
+			firstExtJS.render(this.myElement.nativeElement);
+		}
+		else {
+			firstExtJS.setRenderTo(this.myElement.nativeElement);
+		}
 		var ExtJSComponentRefArray: any = ExtJSBaseRef.toArray();
 		var arrayLength = ExtJSComponentRefArray.length;
 		for (var i = 1; i < arrayLength; i++) {
@@ -110,9 +116,6 @@ export class base{
 		me.ext = me.extjsObject;
 		me.x = me.extjsObject;
 
-
-
-		
 		var componentFactory: ComponentFactory<any>;
 		var type: Type<any>;
 
@@ -124,8 +127,6 @@ export class base{
 			var node = me.extjsObject.innerElement.dom;
 			node.appendChild(me.componentRef['_hostElement'].nativeElement);
 		}
-
-
 
 		if (me.parent != undefined) {
 			me.parent.insert(0, me.extjsObject);
