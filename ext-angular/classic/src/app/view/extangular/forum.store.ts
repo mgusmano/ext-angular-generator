@@ -1,4 +1,4 @@
-import {ExtClass} from '../../../ext-angular-modern/ExtClass';
+import {ExtClass} from '../../../ext-angular-classic/ExtClass';
 import {ForumModel} from './forum.model';
 
 
