@@ -19,13 +19,11 @@ http://se.sencha.com/ExtAngularExample
 
 For Classic:
 * ng new Classic --minimal
-* cp -R ext-angular-generator/src/ext-angular-classic Classic/src
-* cp -R ext-angular-generator/demo/classic/src/* Classic/src
+* cp -R ext-angular-generator/ext-angular/classic/src/* Classic/src
 
 For Modern:
 * ng new Modern --minimal
-* cp -R ext-angular-generator/src/ext-angular-modern Modern/src
-* cp -R ext-angular-generator/demo/modern/src/* Modern/src
+* cp -R ext-angular-generator/ext-angular/modern/src/* Modern/src
 
 For Modern or Classic:
 * cd to either Modern or Classic
