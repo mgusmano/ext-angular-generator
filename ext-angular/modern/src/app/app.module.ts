@@ -14,7 +14,7 @@ import { AgencyService } from './service/agency.service';
 import { ActionsComponent } from './view/main/actions.component';
 import { DetailComponent } from './view/main/detail.component';
 import { FooterComponent } from './view/main/footer.component';
-import { HeaderComponent } from './view/main/header.component';
+import { HeadingComponent } from './view/main/heading.component';
 import { MainComponent } from './view/main/main.component';
 import { MenuComponent } from './view/main/menu.component';
 import { SideBarComponent } from './view/main/sidebar.component';
@@ -87,7 +87,7 @@ export const routing = RouterModule.forRoot(appRoutes);
 		ActionsComponent,
 		DetailComponent,
 		FooterComponent,
-		HeaderComponent,
+		HeadingComponent,
 		MainComponent,
 		MenuComponent,
 		SideBarComponent,
