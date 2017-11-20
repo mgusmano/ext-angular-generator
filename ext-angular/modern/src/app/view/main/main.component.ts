@@ -34,7 +34,7 @@ import { Router, NavigationEnd } from '@angular/router';
 // 	<footer></footer>
 // `,
 	template: `
-		<header></header>
+		<heading></heading>
 		<sidebar></sidebar>
 		<section [ngClass]="detail" class="main-container main-background center" [ngClass]="{sidebarPushRight: isActive}">
 			<router-outlet></router-outlet>

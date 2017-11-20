@@ -6,25 +6,26 @@ import data from './data';
   selector: '',
 	template: `
 	<container
-			fitToParent=true
-			[plugins]="'responsive'"
-			[responsiveConfig]="responsiveConfig">
-		<panel [title]="'Angular2 Ext JS Boilerplate'" [layout]="'fit'" [flex]="'1'">
+		fitToParent=true
+		[plugins]="'responsive'"
+		[responsiveConfig]="responsiveConfig">
+		<panel [title]="'Angular2 Ext JS Boilerplate'" [layout]="'vbox'" [flex]="'1'">
+			<container [layout]="'hbox'"  [padding]="'5'">
+				<searchfield [placeHolder]="'Search...'" [flex]="'1'" (change)="onSearch($event)"></searchfield>
+			</container>
 			<grid
+				[flex]="'1'"
 				[plugins]="gridPlugins"
 				[columns]="gridColumns" 
 				[store]="gridStore"
 				(select)="onPersonSelect($event)"
 				(ready)="onGridReady($event)">
-				<container [layout]="'hbox'" [docked]="'top'" [padding]="'5'">
-					<searchfield [placeHolder]="'Search...'" [flex]="'1'" (change)="onSearch($event)"></searchfield>
-				</container>
 			</grid>
 		</panel>
 		<panel
 				[title]="'employee'"
 				[layout]="'vbox'"
-				[margin]="'0 0 10px 0'"
+				[margin]="'0 0 0 0'"
 				[plugins]="'responsive'"
 				[bodyPadding]="'10 15'"
 				[responsiveConfig]="responsiveConfigEmployee"

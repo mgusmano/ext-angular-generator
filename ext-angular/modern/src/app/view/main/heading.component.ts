@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 //import { AgencyService } from '../../service/agency.service';
 
 @Component({
-	selector: 'header',
-	styleUrls: ['./header.component.css'],
+	selector: 'heading',
+	styleUrls: ['./heading.component.css'],
 //	styles:[require('./header.component.css').toString()],
-	templateUrl: 'header.component.html',
+	templateUrl: 'heading.component.html',
 
 	//selector: 'header',
 	//styles: [``],
@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 
 
 })
-export class HeaderComponent { 
+export class HeadingComponent { 
 	//public thePivotGrid: any;
 	public objArray:any = [
 		{name: 'All Agencies'}, 

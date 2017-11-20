@@ -1,4 +1,4 @@
-import {ExtClass} from '../../../ext-angular-classic/ExtClass';
+import {ExtClass} from '../../../ext-angular-modern/ExtClass';
 import {SimpsonsModel} from './simpsons.model';
 
 export class SimpsonsStore extends ExtClass {
