@@ -6,14 +6,10 @@ import { SalesStore } from '../../store/sales.store';
 	selector: '',
 	styles: [``],
 	template: `
-	<container [fitToParent]="'true'" [layout]="'vbox'">
-		<panel [margin]="'20 20 20 20'" [title]="header" [shadow]="'true'">
-			<selectfield 
-				[config]="selectfieldConfig" 
-				[options]='selectfieldOptions' 
-				(change)='onSelectfieldSelect($event)'>
-			</selectfield>
-		</panel>
+		<combobox
+			[config]='comboConfig'
+			(select)='onComboSelect($event)'>
+		</combobox>	
 		<pivotgrid
 			[flex]="'1'"
 			[title] ='pivotTitle'
@@ -26,23 +22,27 @@ import { SalesStore } from '../../store/sales.store';
 			[config]='cartesianConfig'
 			(ready)="readyCartesian($event)">
 		</cartesian>
-	 </container>
  `
 })
 export class AnalyzeComponent {
 	public header: any = '<div class="heading">Analyze</div>';
-	public selectfieldConfig: any = {
-		label: 'Select report:',
-		labelWidth: 100,
-		usePicker: true,
-		margin: '15 0 0 10'
-	}
 	public selectfieldOptions: any = [
 		{ value: 'ByCountry', text: 'What are the order amounts of each salesperson in a specific country?' },
 		{ value: 'ByYear', text: 'How did salespeople perform in a specific year?' },
 		{ value: 'Total', text: 'What are the order amounts of each salesperson?' }
 	]
-	
+	// public selectfieldConfig: any = {
+	// 	label: 'Select report:',
+	// 	labelWidth: 100,
+	// 	usePicker: true,
+	// 	margin: '15 0 0 10'
+	// }
+	public comboConfig: any = {
+		fieldLabel: 'Select report:',
+		width: '99%',
+		store: this.selectfieldOptions,
+		margin: '15 20 10 10'
+	}
 	public thePivotGrid; any;
 	public pivotTitle: any;
 	public pivotgridConfig: any;
@@ -57,9 +57,12 @@ export class AnalyzeComponent {
 	pivotgridInit() {
 		this.pivotTitle = 'By Country';
 		this.pivotgridConfig= {
-			plugins: [{
-				type: 'pivotdrilldown'
-			}],
+			plugins: {
+        pivotdrilldown: true
+    	},
+			// plugins: [{
+			// 	type: 'pivotdrilldown'
+			// }],
 			margin: '0 20 20 20',
 			shadow: true,
 			matrix: {
@@ -79,6 +82,7 @@ export class AnalyzeComponent {
 		this.cartesianConfig = {
 			margin: '0 20 20 20',
 			shadow: true,
+			height: 500,
 			legend: { type: 'sprite', docked: 'top' },
 			series: [],
 			axes: [
@@ -103,16 +107,16 @@ export class AnalyzeComponent {
 	}
 
 	readyPivotGrid(thePivotGrid) {
-//		console.log('readyPivotGrid');
+		console.log('readyPivotGrid');
 		this.thePivotGrid = thePivotGrid;
 	}
 	readyCartesian(theCartesian) {
-//		console.log('readyCartesian');
+		console.log('readyCartesian');
 		this.theCartesian = theCartesian;
 	}
 
 	public onPivotgridPivotDone({matrix}) {
-//		console.log('onPivotgridPivotDone');
+		console.log('onPivotgridPivotDone');
 		var chart = this.theCartesian.x;
 		var seriesXField = []; 
 		var seriesYField = []; 
@@ -153,7 +157,9 @@ export class AnalyzeComponent {
 	}
 
 
-	public onSelectfieldSelect({newValue}) {
+	//public onSelectfieldSelect({newValue}) {
+	public onComboSelect({record}) {
+		var newValue = record.data.value
 		var reportspivotgrid = this.thePivotGrid.extjsObject;
 		switch(newValue) {
 			case 'ByCountry':

@@ -11,7 +11,7 @@ import data from './data';
 		[responsiveConfig]="responsiveConfig">
 		<panel [title]="'Angular2 Ext JS Boilerplate'" [layout]="'vbox'" [flex]="'1'">
 			<container [layout]="'hbox'"  [padding]="'5'">
-				<searchfield [placeHolder]="'Search...'" [flex]="'1'" (change)="onSearch($event)"></searchfield>
+				<searchfield [flex]="'1'" (change)="onSearch($event)"></searchfield>
 			</container>
 			<grid
 				[flex]="'1'"

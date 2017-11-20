@@ -38,15 +38,15 @@ export class SpendingDetailComponent {
 	constructor(public agencyService: AgencyService) {
 		this.gridConfig = { 
 			store: agencyService.getAgencyPortfolioStore(),
-			plugins: [
-				{ type: 'grideditable' },
-				{ type: 'gridviewoptions' },
-				{ type: 'pagingtoolbar' },
-				{ type: 'summaryrow'},
-				{ type: 'columnresizing' }
-			//	{ type: 'rowexpander' },
-			// { type: 'gridexporter'}
-			],
+			// plugins: [
+			// 	{ type: 'grideditable' },
+			// 	{ type: 'gridviewoptions' },
+			// 	{ type: 'pagingtoolbar' },
+			// 	{ type: 'summaryrow'},
+			// 	{ type: 'columnresizing' }
+			// //	{ type: 'rowexpander' },
+			// // { type: 'gridexporter'}
+			// ],
 			columns: [
 				//{ dataIndex: 'agency', text: 'agency', width: 300 },
 				{ dataIndex: 'agencyCode', text: 'agencyCode', width: 300 },
