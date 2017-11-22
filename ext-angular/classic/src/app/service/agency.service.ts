@@ -1,5 +1,6 @@
 import { Injectable }    from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
+import { AgencyPortfolioPagedStore } from '../store/agencyportfoliopaged.store';
 import { AgencyPortfolioStore } from '../store/agencyportfolio.store';
 import { AgencyStore } from '../store/agency.store';
 import { SAMPLEDATA2 } from './sampledata2';
@@ -15,9 +16,13 @@ export class AgencyService {
 	public agencyAnnouncedSource = new Subject<string>();
 	agencyAnnounced$ = this.agencyAnnouncedSource.asObservable();
   
+	public agencyPortfolioPagedStore = new AgencyPortfolioPagedStore().extjsObject;
 	public agencyPortfolioStore = new AgencyPortfolioStore().extjsObject;
 	public agencyStore = new AgencyStore().extjsObject;
 
+	getAgencyPortfolioPagedStore() {
+		return this.agencyPortfolioPagedStore;
+	}	
 	getAgencyPortfolioStore() {
 		return this.agencyPortfolioStore;
 	}

@@ -84,17 +84,29 @@ export class AgencyPortfolioStore extends ExtClass {
 				//{ name: 'updatedTime', type: 'string' } //"20:34:33"
 			],
 			sorters: [ 'agencyCode', 'bureauCode', 'typeOfInvestment' ],
+			pageSize: 20,
+			data: agencyData,
 			proxy: {
-				//type: 'jsonp',
-				//url: 'https://itdashboard.gov/api/v1/ITDB2/dataFeeds/portfolio?json=true',
-				//url: 'https://itdashboard.gov/api/v1/ITDB2/dataFeeds/portfolio/agencyCode/005?json=true',
-				type: 'ajax',
-				url: 'assets/resources/app/data/agencyportfolio.json',
-				reader: {
-					type: 'json',
-					rootProperty: 'result'
-				}
-			}
+				type: 'memory',
+				//enablePaging: true,
+        reader: {
+            type: 'json',
+            rootProperty: 'result'
+        }
+    	},
+
+
+			// proxy: {
+			// 	//type: 'jsonp',
+			// 	//url: 'https://itdashboard.gov/api/v1/ITDB2/dataFeeds/portfolio?json=true',
+			// 	//url: 'https://itdashboard.gov/api/v1/ITDB2/dataFeeds/portfolio/agencyCode/005?json=true',
+			// 	type: 'ajax',
+			// 	url: 'assets/resources/app/data/agencyportfolio.json',
+			// 	reader: {
+			// 		type: 'json',
+			// 		rootProperty: 'result'
+			// 	}
+			// }
 
 		};
 

@@ -66,7 +66,7 @@ const appRoutes: Routes = [
 //	{ path: 'inheritclient', component: InheritClientComponent },
 //	{ path: 'dynamicclient', component: DynamicClientComponent },
 	{ path: 'simplegrid', component: SimpleGridComponent },
-	{ path: 'boilerplate', component: BoilerplateComponent },
+//	{ path: 'boilerplate', component: BoilerplateComponent },
 	{ path: 'configurator', component: ConfiguratorComponent },
 ];
 export const routing = RouterModule.forRoot(appRoutes);

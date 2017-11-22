@@ -4,48 +4,29 @@ import { AgencyService }  from '../../service/agency.service';
 @Component({
 	styles:  [``],
 	template: `
-	<container [fitToParent]="'true'" [layout]="'vbox'">
-		<panel [margin]="'20 20 20 20'" [title]="header" [shadow]="'true'">
-		<button [text]="'Show Configurator'" (tapit)='showConfigurator()' style="margin-top:10px;margin-left:10px;width:250px;height:50px;" >
-			Show Configurator
-		</button>
-		</panel>
-		<pivotgrid [flex]="'1'"
-			(ready)='readyPivotGrid($event)'
-			(configchange)='configchangePivotGrid($event)'
-			[config]='configuratorConfig'
-		></pivotgrid>
-	</container>
+<pivotgrid fitToParent = true
+	[config]='configuratorConfig'
+></pivotgrid>
 	`
 })
 export class ConfiguratorComponent {
-	public header: any = '<div class="heading">Analyze</div>';
-	public top:any = 50;
-	public width: any = 'calc(100% - 0px)';
-	public height: any = 'calc(100% - ' + this.top + 'px)';
-	public configuratorConfig:any;
 	public thePivotGrid; any;
-
-	readyPivotGrid(thePivotGrid) {
-		this.thePivotGrid = thePivotGrid;
-	}
-
-	showConfigurator() {
-		this.thePivotGrid.extjsObject.showConfigurator();
-	}
-
-	configchangePivotGrid(thePivotGrid) {
-		this.thePivotGrid.extjsObject.reconfigurePivot({'colGrandTotalsPosition': 'last' });
-	}
+	public configuratorConfig:any;
 
 	constructor(public agencyService: AgencyService) {
 		this.configuratorConfig = { 
-			//left: 0, top: this.top,
-			//style: { width: this.width, height: this.height },
-			plugins: [
-				{ type: 'columnresizing' }, 
-				{
-					type: 'pivotconfigurator',
+			matrix: {
+				type: 'local',
+				viewLayoutType: 'outline',
+				store: agencyService.getAgencyPortfolioStore(),
+				enableLocking: true,
+				colGrandTotalsPosition: 'none',
+				leftAxis: [],
+				topAxis: [],
+				aggretate: []
+			},
+			 plugins: {
+				pivotconfigurator: {
 					width: 500,
 					fields: [
 						{
@@ -63,10 +44,6 @@ export class ConfiguratorComponent {
 								header:     'Agency',
 								settings: {
 										aggregators: ['count']
-										// renderers: {
-										//     'Colored 0,000.00': 'coloredRenderer'
-										// },
-										// Define here custom formatters that ca be used on this dimension
 								}
 						}, 
 						{
@@ -98,19 +75,8 @@ export class ConfiguratorComponent {
 								}
 						} 
 					]
-			}],
-			matrix: {
-				type: 'local',
-				viewLayoutType: 'outline',
-				//store: new AgencyPortfolioStore().extjsObject,
-				store: agencyService.getAgencyPortfolioStore(),
-				enableLocking: true,
-				colGrandTotalsPosition: 'none',
-				topAxis: [],
-				leftAxis: [],
-				aggretate: []
+				}
 			}
 		}
 	}
-
 }

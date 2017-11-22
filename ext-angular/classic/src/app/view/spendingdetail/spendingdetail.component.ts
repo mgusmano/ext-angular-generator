@@ -37,7 +37,7 @@ export class SpendingDetailComponent {
 
 	constructor(public agencyService: AgencyService) {
 		this.gridConfig = { 
-			store: agencyService.getAgencyPortfolioStore(),
+			store: agencyService.getAgencyPortfolioPagedStore(),
 			// plugins: [
 			// 	{ type: 'grideditable' },
 			// 	{ type: 'gridviewoptions' },
@@ -47,6 +47,20 @@ export class SpendingDetailComponent {
 			// //	{ type: 'rowexpander' },
 			// // { type: 'gridexporter'}
 			// ],
+
+			bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true,
+        displayMsg: 'Displaying agencies {0} - {1} of {2}',
+        emptyMsg: "No agences to display",
+
+        // items: ['-', {
+        //     bind: '{expanded ? "Hide Preview" : "Show Preview"}',
+        //     pressed: '{expanded}',
+        //     enableToggle: true,
+        //     toggleHandler: 'onToggleExpanded'
+        // }]
+    	},
 			columns: [
 				//{ dataIndex: 'agency', text: 'agency', width: 300 },
 				{ dataIndex: 'agencyCode', text: 'agencyCode', width: 300 },
